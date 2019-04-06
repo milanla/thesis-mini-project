@@ -42,6 +42,8 @@ body {
         clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
         background-color: $purple;
     }
+
+    button:hover { cursor: pointer; }
 }
 
 header {
@@ -87,11 +89,11 @@ header {
             a {
                 color: $white;
                 text-decoration: none;
+
+                &:hover { color: $green; }
             }
         }
-        li:nth-child(4) {
-            margin-left: 30px;
-        }
+        li:nth-child(4) { margin-left: 30px; }
     }
     
     
@@ -109,9 +111,7 @@ main {
         width: 36%;
         word-spacing: 5px;
 
-        span {
-            color: $green;
-        }
+        span { color: $green; }
     }
 
     input#search-bar {
@@ -121,6 +121,9 @@ main {
         border: 0;
         border-radius: 8px;
         font-size: 0.98em;
+
+        &:hover { cursor: text; }
+        &:focus { outline: none; }
     }
 
     button#search-btn {
@@ -150,7 +153,9 @@ div#learn-more {
     }
 
     #arrow {
-        margin: 0 auto;
+        margin: 30px auto;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
         background-image: url('../images/arrow.svg');
         background-repeat: no-repeat;
         background-position: center;
@@ -166,7 +171,7 @@ div#learn-more {
 div#create-account {
     width: 60%;
     margin: 100px auto;
-    // text-align: center;
+
     p {
         color: $gray;
         font-size: 1.2em;
@@ -237,21 +242,13 @@ div#services {
                 background-position: center;
             }
             
-            .web-hosting {
-                background-image: url('../images/technology.png');
-            }
+            .web-hosting { background-image: url('../images/technology.png'); }
 
-            .resellers {
-                background-image: url('../images/shapes-and-symbols.png');
-            }
+            .resellers { background-image: url('../images/shapes-and-symbols.png'); }
 
-            .vps-hosting {
-                background-image: url('../images/storage.png');
-            }
+            .vps-hosting { background-image: url('../images/storage.png'); }
 
-            .cloud-hosting {
-                background-image: url('../images/cloud.png')
-            }
+            .cloud-hosting { background-image: url('../images/cloud.png') }
         }
     }
 }
@@ -270,13 +267,9 @@ div#are-you-ready {
     font-weight: 300;
     line-height: 7px;
 
-    p:nth-child(1) {
-        color: $purple;
-    }
+    p:nth-child(1) { color: $purple; }
 
-    p:nth-child(2) {
-        color: $purple-darker;
-    }
+    p:nth-child(2) { color: $purple-darker; }
 
     button:nth-child(1) {
         margin-right: 10px;
@@ -304,6 +297,8 @@ footer {
     a {
         color: rgba(255, 255, 255, 0.7);
         text-decoration: none;
+
+        &:hover { color: $white; }
     }
 
     h4 {
@@ -312,9 +307,7 @@ footer {
         font-weight: 500;
     }
     
-    img {
-        width: 15px;
-    }
+    img { width: 15px; }
 
     p {
         font-size: 0.9em;
@@ -351,140 +344,340 @@ footer {
 
 }
 
-// Media Queries for Mobile
-
-@media screen and (max-width: 375px) {
+// Media Queries
+@media screen and (max-width: 768px) {
     header {
         width: 90%;
-        margin: 0 auto;
 
         #nav-bar {
             display: flex;
             flex-direction: column;
-        }
-    
-        h1#nav-logo {
-            font-size: 1em;
-        }
-    
-        ul#nav-menu {
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            list-style-type: none;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            
-            button {
-                padding: 7px 12px;   
-                font-size: 0.8em;
-            }
-    
-            li {
-                padding: 0 10px;
-                font-size: 0.8em;
-        
-                a {
-                    color: $white;
-                    text-decoration: none;
+
+            h1 { font-size: 1.2em; }
+
+            ul#nav-menu {
+                display: flex;
+                flex-direction: row;
+                padding-left: 0;
+                justify-content: space-between;
+                align-items: center;
+                
+                li {
+                    margin: 0 30px;
+                    padding: 0;
                 }
-            }
-            li:nth-child(4) {
-                margin-left: 0px;
             }
         }
     }
 
     main {
-        width: 100%; 
-
+        margin: 0 auto;
+        width: 80%;
+        text-align: center;
+        
         h1 {
-            width: 75%;
-            margin: 10% auto 5% auto;
-            font-size: 2em;
+            font-size: 2.2em;
+            width: 50%;
+            word-spacing: 5px;
+        }
+    
+        input#search-bar {
+            width: 40%;
+            padding: 17px 17px 17px 30px;
+            font-size: 0.9em;
+        }
+    
+        button#search-btn {
+            margin-left: 5px;
+            padding: 17px;
+        }
+        
+    }
+
+    div#learn-more { margin: 160px auto 100px auto; }
+
+    div#create-account {
+        width: 90%;
+        margin: 110px auto;
+    }
+
+    div#are-you-ready {
+        padding-top: 0;
+        padding-bottom: 50px;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    footer {
+    
+        h4 { font-size: 0.9em; }
+    
+        p {
+            font-size: 0.8em;
+            margin: 5px 0;
+        }
+    
+        #footer-content {
+            width: 90%;
+            margin: 0 auto;
+            padding: 40px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around; 
+        }
+
+        .footer-column {
+            margin: 0 10px;
+        }
+    
+        #social-media {
+            display: flex;
+            flex-direction: column;
+            padding-top: 15px;
+    
+            img {
+                width: 20px;
+                margin: 5px 5px;
+            }
+        }
+    
+    }
+}
+
+@media screen and (max-width: 411px) {
+    header {
+        width: 90%;
+
+        #nav-bar {
+            display: flex;
+            flex-direction: column;
+
+            h1 { font-size: 1.2em; }
+
+            ul#nav-menu {
+                display: flex;
+                flex-direction: row;
+                padding-left: 0;
+                justify-content: space-between;
+                align-items: center;
+                
+                li {
+                    font-size: 0.9em;
+                    margin: 0 10px;
+                    padding: 0;
+                }
+
+                button { 
+                    font-size: 0.8em;
+                    padding: 9px;
+                }
+            }
+        }
+    }
+
+    main {
+        h1 {
+            width: 80%;
+            font-size: 1.8em;
         }
 
         input#search-bar {
-            margin: 0 auto;
-            padding: 10px 5px 10px 15px;
             display: block;
-            height: 100%;
-            width: 60%;
+            margin: 12px auto;
+            width: 70%;
+            padding: 12px 0 12px 20px;
             font-size: 0.8em;
         }
+        
+        button#search-btn { padding: 10px; }
 
-        button#search-btn {
-            margin: 10px auto;
-            width: 99px;
-            height: 100%;
-            padding: 10px;
-            font-size: 0.9em;
-            color: $white;
+        div#learn-more {
+            width: 100%;
+            margin: 120px auto 80px auto;
+            span { font-size: 0.8em; }
         }
 
-        #learn-more {
-            span {
-               font-size: 0.8em;
-            }
+        div#create-account {
+            width: 90%;
+            margin: 120px auto 80px auto;
+
+            p { font-size: 0.9em; }
+            button { font-size: 0.6em; }
         }
 
-        #create-account {
-            width: 85%;
-            margin: 240px auto 80px auto;
-  
-            p {
-                font-size: 0.8em;
-            }
-            button {
-                background-color: $purple;
-                padding: 8px 20px;
-                font-size: 0.6em;
-            }
-        }
-
-        #services {
+        div#services {
+            width: 100%; 
 
             div#card-container {
-
+                
                 .card {
-                    grid-template-columns: 30% auto;
+                    display: flex; 
+                    flex-direction: column;
 
-                    h3 {
-                        font-size: 0.9em;
-                    }
-                    
-                    p {
-                        font-size: 0.9em;
-                    }
+                    h3 { font-size: 0.9em; }
+                    p { font-size: 0.9em; }
                 }
             }
         }
 
-        #are-you-ready {
+        div#are-you-ready {
             padding: 0 0 40px 0;
-            text-align: left;
-            width: 86%;
-            margin: 0 auto;
+            text-align: center;
+            width: 90%;
             flex-direction: column;
-            justify-content: flex-start;
-            font-size: 1.2em;
+            align-items: center;
+            font-size: 1em;
+            line-height: 10px;
 
-            p:nth-child(1) {
-                color: $purple;
+            button {
+                margin: 5px auto; 
+
+                &:nth-child(1) {
+                    padding: 9px;
+                    font-size: 0.7em;
+                }
+                &:nth-child(2) {
+                    font-size: 0.7em;
+                }
             }
-        
-            p:nth-child(2) {
-                color: $purple-darker;
+        }
+    }
+
+    footer {
+    
+        h4 { font-size: 0.9em; }
+    
+        p {
+            font-size: 0.8em;
+            margin: 5px 0;
+        }
+    
+        #footer-content {
+            width: 90%;
+            margin: 0 auto;
+            padding: 10px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around; 
+        }
+
+        .footer-column {
+            margin: 0 10px;
+        }
+    
+        #social-media {
+            display: flex;
+            flex-direction: column;
+            padding-top: 15px;
+    
+            img {
+                width: 20px;
+                margin: 5px 5px;
             }
-        
-            button:nth-child(1) {
-                padding: 10px;
+        }
+    
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+    header {
+        width: 90%;
+        margin: 0 auto;
+        #nav-bar {
+            display: flex;
+            flex-direction: column; 
+        }
+
+        ul#nav-menu {
+            width: 90%;
+            display: flex;
+            padding-left: 0;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            button {
                 font-size: 0.5em;
+                padding: 6px;
             }
-        
-            button:nth-child(2) {
-                font-size: 0.5em;
+
+            li {
+                font-size: 0.7em;
+                padding: 0;
+                margin: 0 5px;
+
+                &:nth-child(4) { margin-left: 0; }
+            }
+        }
+    }
+
+    main {
+        h1 {
+            margin-top: 50px;
+            width: 85%;
+            font-size: 1.5em;
+        }
+
+        input#search-bar {
+            display: block;
+            margin: 10px auto;
+            width: 70%;
+            padding: 10px 0 10px 20px;
+            font-size: 0.7em;
+        }
+
+        button#search-btn {
+            padding: 8px;
+            font-size: 0.8em;
+        }
+
+        div#learn-more {
+            margin: 130px auto 100px auto;
+
+            span { font-size: 0.8em; }
+        }
+
+        div#create-account {
+            width: 90%;
+            margin: 120px auto 80px auto;
+            p { font-size: 0.8em; }
+            button { font-size: 0.6em; }
+        }
+
+        div#services {
+            width: 100%; 
+
+            div#card-container {
+                
+                .card {
+                    display: flex; 
+                    flex-direction: column;
+
+                    h3 { font-size: 0.9em; }
+                    p { font-size: 0.9em; }
+                }
+            }
+        }
+
+        div#are-you-ready {
+            padding: 0 0 40px 0;
+            text-align: center;
+            width: 80%;
+            flex-direction: column;
+            align-items: center;
+            font-size: 0.9em;
+
+            button {
+                margin: 5px auto; 
+
+                &:nth-child(1) {
+                    padding: 9px;
+                    font-size: 0.5em;
+                }
+                &:nth-child(2) {
+                    font-size: 0.5em;
+                }
             }
         }
     }
@@ -536,4 +729,16 @@ footer {
     
     }
 
+}
+
+// Animation 
+
+.bounce {
+    animation-name: bounce;
+    animation-timing-function: ease;
+}
+@keyframes bounce {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
 }

@@ -40,6 +40,10 @@ body #purple-stripe {
   background-color: #6c72d9;
 }
 
+body button:hover {
+  cursor: pointer;
+}
+
 header {
   width: 80%;
   margin: 0 auto;
@@ -102,6 +106,10 @@ header ul#nav-menu li a {
   text-decoration: none;
 }
 
+header ul#nav-menu li a:hover {
+  color: #89d99d;
+}
+
 header ul#nav-menu li:nth-child(4) {
   margin-left: 30px;
 }
@@ -133,6 +141,14 @@ main input#search-bar {
   font-size: 0.98em;
 }
 
+main input#search-bar:hover {
+  cursor: text;
+}
+
+main input#search-bar:focus {
+  outline: none;
+}
+
 main button#search-btn {
   margin-left: 7px;
   background-color: #89d99d;
@@ -159,7 +175,11 @@ div#learn-more span {
 }
 
 div#learn-more #arrow {
-  margin: 0 auto;
+  margin: 30px auto;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
   background-image: url("../images/arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -336,6 +356,10 @@ footer a {
   text-decoration: none;
 }
 
+footer a:hover {
+  color: #ffffff;
+}
+
 footer h4 {
   font-size: 1em;
   margin-bottom: 0;
@@ -388,7 +412,272 @@ footer #social-media img {
   margin: 10px 5px;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
+  header {
+    width: 90%;
+  }
+  header #nav-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header #nav-bar h1 {
+    font-size: 1.2em;
+  }
+  header #nav-bar ul#nav-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-left: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header #nav-bar ul#nav-menu li {
+    margin: 0 30px;
+    padding: 0;
+  }
+  main {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+  }
+  main h1 {
+    font-size: 2.2em;
+    width: 50%;
+    word-spacing: 5px;
+  }
+  main input#search-bar {
+    width: 40%;
+    padding: 17px 17px 17px 30px;
+    font-size: 0.9em;
+  }
+  main button#search-btn {
+    margin-left: 5px;
+    padding: 17px;
+  }
+  div#learn-more {
+    margin: 160px auto 100px auto;
+  }
+  div#create-account {
+    width: 90%;
+    margin: 110px auto;
+  }
+  div#are-you-ready {
+    padding-top: 0;
+    padding-bottom: 50px;
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer h4 {
+    font-size: 0.9em;
+  }
+  footer p {
+    font-size: 0.8em;
+    margin: 5px 0;
+  }
+  footer #footer-content {
+    width: 90%;
+    margin: 0 auto;
+    padding: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  footer .footer-column {
+    margin: 0 10px;
+  }
+  footer #social-media {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 15px;
+  }
+  footer #social-media img {
+    width: 20px;
+    margin: 5px 5px;
+  }
+}
+
+@media screen and (max-width: 411px) {
+  header {
+    width: 90%;
+  }
+  header #nav-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header #nav-bar h1 {
+    font-size: 1.2em;
+  }
+  header #nav-bar ul#nav-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-left: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header #nav-bar ul#nav-menu li {
+    font-size: 0.9em;
+    margin: 0 10px;
+    padding: 0;
+  }
+  header #nav-bar ul#nav-menu button {
+    font-size: 0.8em;
+    padding: 9px;
+  }
+  main h1 {
+    width: 80%;
+    font-size: 1.8em;
+  }
+  main input#search-bar {
+    display: block;
+    margin: 12px auto;
+    width: 70%;
+    padding: 12px 0 12px 20px;
+    font-size: 0.8em;
+  }
+  main button#search-btn {
+    padding: 10px;
+  }
+  main div#learn-more {
+    width: 100%;
+    margin: 120px auto 80px auto;
+  }
+  main div#learn-more span {
+    font-size: 0.8em;
+  }
+  main div#create-account {
+    width: 90%;
+    margin: 120px auto 80px auto;
+  }
+  main div#create-account p {
+    font-size: 0.9em;
+  }
+  main div#create-account button {
+    font-size: 0.6em;
+  }
+  main div#services {
+    width: 100%;
+  }
+  main div#services div#card-container .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main div#services div#card-container .card h3 {
+    font-size: 0.9em;
+  }
+  main div#services div#card-container .card p {
+    font-size: 0.9em;
+  }
+  main div#are-you-ready {
+    padding: 0 0 40px 0;
+    text-align: center;
+    width: 90%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 1em;
+    line-height: 10px;
+  }
+  main div#are-you-ready button {
+    margin: 5px auto;
+  }
+  main div#are-you-ready button:nth-child(1) {
+    padding: 9px;
+    font-size: 0.7em;
+  }
+  main div#are-you-ready button:nth-child(2) {
+    font-size: 0.7em;
+  }
+  footer h4 {
+    font-size: 0.9em;
+  }
+  footer p {
+    font-size: 0.8em;
+    margin: 5px 0;
+  }
+  footer #footer-content {
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  footer .footer-column {
+    margin: 0 10px;
+  }
+  footer #social-media {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 15px;
+  }
+  footer #social-media img {
+    width: 20px;
+    margin: 5px 5px;
+  }
+}
+
+@media screen and (max-width: 320px) {
   header {
     width: 90%;
     margin: 0 auto;
@@ -402,17 +691,12 @@ footer #social-media img {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  header h1#nav-logo {
-    font-size: 1em;
-  }
   header ul#nav-menu {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+    width: 90%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    padding-left: 0;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -420,96 +704,93 @@ footer #social-media img {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   header ul#nav-menu button {
-    padding: 7px 12px;
-    font-size: 0.8em;
+    font-size: 0.5em;
+    padding: 6px;
   }
   header ul#nav-menu li {
-    padding: 0 10px;
-    font-size: 0.8em;
-  }
-  header ul#nav-menu li a {
-    color: #ffffff;
-    text-decoration: none;
+    font-size: 0.7em;
+    padding: 0;
+    margin: 0 5px;
   }
   header ul#nav-menu li:nth-child(4) {
-    margin-left: 0px;
-  }
-  main {
-    width: 100%;
+    margin-left: 0;
   }
   main h1 {
-    width: 75%;
-    margin: 10% auto 5% auto;
-    font-size: 2em;
+    margin-top: 50px;
+    width: 85%;
+    font-size: 1.5em;
   }
   main input#search-bar {
-    margin: 0 auto;
-    padding: 10px 5px 10px 15px;
     display: block;
-    height: 100%;
-    width: 60%;
-    font-size: 0.8em;
+    margin: 10px auto;
+    width: 70%;
+    padding: 10px 0 10px 20px;
+    font-size: 0.7em;
   }
   main button#search-btn {
-    margin: 10px auto;
-    width: 99px;
-    height: 100%;
-    padding: 10px;
-    font-size: 0.9em;
-    color: #ffffff;
-  }
-  main #learn-more span {
+    padding: 8px;
     font-size: 0.8em;
   }
-  main #create-account {
-    width: 85%;
-    margin: 240px auto 80px auto;
+  main div#learn-more {
+    margin: 130px auto 100px auto;
   }
-  main #create-account p {
+  main div#learn-more span {
     font-size: 0.8em;
   }
-  main #create-account button {
-    background-color: #6c72d9;
-    padding: 8px 20px;
+  main div#create-account {
+    width: 90%;
+    margin: 120px auto 80px auto;
+  }
+  main div#create-account p {
+    font-size: 0.8em;
+  }
+  main div#create-account button {
     font-size: 0.6em;
   }
-  main #services div#card-container .card {
-    -ms-grid-columns: 30% auto;
-        grid-template-columns: 30% auto;
+  main div#services {
+    width: 100%;
   }
-  main #services div#card-container .card h3 {
-    font-size: 0.9em;
-  }
-  main #services div#card-container .card p {
-    font-size: 0.9em;
-  }
-  main #are-you-ready {
-    padding: 0 0 40px 0;
-    text-align: left;
-    width: 86%;
-    margin: 0 auto;
+  main div#services div#card-container .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    font-size: 1.2em;
   }
-  main #are-you-ready p:nth-child(1) {
-    color: #6c72d9;
+  main div#services div#card-container .card h3 {
+    font-size: 0.9em;
   }
-  main #are-you-ready p:nth-child(2) {
-    color: #694ad9;
+  main div#services div#card-container .card p {
+    font-size: 0.9em;
   }
-  main #are-you-ready button:nth-child(1) {
-    padding: 10px;
+  main div#are-you-ready {
+    padding: 0 0 40px 0;
+    text-align: center;
+    width: 80%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 0.9em;
+  }
+  main div#are-you-ready button {
+    margin: 5px auto;
+  }
+  main div#are-you-ready button:nth-child(1) {
+    padding: 9px;
     font-size: 0.5em;
   }
-  main #are-you-ready button:nth-child(2) {
+  main div#are-you-ready button:nth-child(2) {
     font-size: 0.5em;
   }
   footer {
@@ -559,6 +840,43 @@ footer #social-media img {
   footer #social-media img {
     width: 20px;
     margin: 5px 5px;
+  }
+}
+
+.bounce {
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 /*# sourceMappingURL=main.css.map */

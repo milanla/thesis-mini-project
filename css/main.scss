@@ -6,7 +6,6 @@ $green: #89d99d;
 $gray: #777;
 $light-gray: #e3e3e3;
 $purple-shadow: #1b143546;
-$gradient: linear-gradient(to left top, #694ad9, #6460e0, #6373e5, #6884e7, #7294e8, #5ea2ed, #50afef, #4dbbed, #23c6e3, #2ecfd0, #5cd6b7, #89d99d);
 
 ///////// icons ////////
 $web-hosting-icon: url('../images/technology.png');
@@ -15,25 +14,20 @@ $vps-hosting-icon: url('../images/storage.png');
 $cloud-hosting-icon: url('../images/cloud.png');
 ///////////////////////
 
-//////// Mixins ////////
-
+//////// Mixin ////////
 @mixin query($size) {
     @media screen and (min-width: $size) {
         @content;
     }
 }
 ////////////////////////
-
-
 body, html {
     box-sizing: border-box;
     height: 100%;
     padding: 0;
     margin: 0;
     min-width: 320px; 
-    h1 {
-        margin: 0;
-    }
+    h1 { margin: 0; }
 }
 
 body {
@@ -42,6 +36,7 @@ body {
 
 button, a {
     cursor: pointer;
+    &:hover { transform: translateY(-2px) }
 }
 
 // Stripe 
@@ -93,13 +88,9 @@ button, a {
     div#navbar-toggle {
         display: inline-block;
 
-        @include query(768px) {
-            display: none;
-        }
+        @include query(768px) { display: none; }
 
-        &:hover {
-            cursor: pointer;
-        }
+        &:hover { cursor: pointer; }
 
         img { 
             width: 35px; 
@@ -152,9 +143,7 @@ button, a {
         text-decoration: none; 
         color: $white; 
 
-        &:hover {
-            color: $green;
-        }
+        &:hover { color: $green; }
     }
     button { 
         padding: 10px; 
@@ -178,9 +167,7 @@ main {
     padding-top: 150px;
     text-align: center;
 
-    @include query(768px) {
-        padding-top: 120px;
-    }
+    @include query(768px) { padding-top: 120px; }
 
     h1 {
         font-size: 1.7em;
@@ -190,21 +177,13 @@ main {
         margin-bottom: 20px;
 
 
-        @include query(414px) {
-            font-size: 2em;
-        } 
+        @include query(414px) { font-size: 2em; } 
 
-        @include query(576px) {
-            font-size: 2.2em;
-        }
+        @include query(576px) { font-size: 2.2em; }
 
-        @include query(768px) {
-            font-size: 2.6em;
-        }
+        @include query(768px) { font-size: 2.6em; }
 
-        span {
-            color: $green;
-        }
+        span { color: $green; }
     }
 
     input#search-bar {
@@ -265,9 +244,7 @@ div#learn-more {
         color: $white;
         text-transform: uppercase;
 
-        @include query(414px) {
-            font-size: 1em;
-        }
+        @include query(414px) { font-size: 1em; }
     }
 
     #arrow {
@@ -282,7 +259,7 @@ div#learn-more {
         border-radius: 50%;
         height: 55px;
         width: 55px;
-        box-shadow: 0 2px 10px #1b143546;
+        box-shadow: 0 2px 10px $purple-shadow;
     }
 }
 
@@ -296,17 +273,11 @@ div#create-account {
         padding-bottom: 80px;
     }
 
-    @include query(768px) {
-        width: 65%;
-    }
+    @include query(768px) { width: 65%; }
 
-    @include query(978px) {
-        width: 85%;
-    }
+    @include query(978px) { width: 85%; }
 
-    @include query(1024px) {
-        width: 80%;
-    }
+    @include query(1024px) { width: 80%; }
 
     p { 
         font-size: 1.2em; 
@@ -321,7 +292,7 @@ div#create-account {
         padding: 10px 15px;
         font-size: 0.7em;
         text-transform: uppercase;
-        box-shadow: 0 2px 10px #1b143546;
+        box-shadow: 0 2px 10px $purple-shadow;
 
         @include query(768px) {
             padding: 10px 20px;
@@ -352,9 +323,7 @@ div#services {
         flex-flow: row wrap;
         justify-content: center;
 
-        img {
-            display: none;
-        }
+        img { display: none; }
 
         .card {
             width: 450px;
@@ -474,9 +443,7 @@ footer {
         justify-content: space-around;
         align-items: flex-start;
 
-        .footer-column {
-            margin: 0 5px;
-        }
+        .footer-column { margin: 0 5px; }
 
         a {
             color: rgba(255, 255, 255, 0.7);

@@ -6,6 +6,7 @@ body, html {
   padding: 0;
   margin: 0;
   min-width: 320px;
+  position: relative;
 }
 
 body h1, html h1 {
@@ -26,14 +27,14 @@ button:hover {
           transform: translateY(-2px);
 }
 
-#darker-purple-stripe, #dark-purple-stripe, #purple-stripe {
+#darker-purple-stripe, #dark-purple-stripe, #purple-stripe, #gray-stripe {
   width: 100%;
   height: 100%;
   position: absolute;
-  top: 0;
 }
 
 #darker-purple-stripe {
+  top: 0;
   z-index: -1;
   -webkit-clip-path: polygon(0 0, 0 20%, 65% 0);
           clip-path: polygon(0 0, 0 20%, 65% 0);
@@ -41,6 +42,7 @@ button:hover {
 }
 
 #dark-purple-stripe {
+  top: 0;
   z-index: -2;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 48%, 0 79%);
           clip-path: polygon(0 0, 100% 0, 100% 48%, 0 79%);
@@ -48,10 +50,25 @@ button:hover {
 }
 
 #purple-stripe {
+  top: 0;
   z-index: -3;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
   background-color: #6c72d9;
+}
+
+#gray-stripe {
+  top: 1450px;
+  z-index: -1;
+  -webkit-clip-path: polygon(0 73%, 100% 40%, 100% 100%, 0% 100%);
+          clip-path: polygon(0 73%, 100% 40%, 100% 100%, 0% 100%);
+  background-color: #767bda14;
+}
+
+@media screen and (min-width: 1024px) {
+  #gray-stripe {
+    top: 950px;
+  }
 }
 
 #nav-bar {
@@ -620,7 +637,7 @@ footer #social-media img {
   header {
     width: 80%;
     margin: 0 auto;
-    padding: 10px;
+    padding: 5px 0 10px 0;
   }
 }
 

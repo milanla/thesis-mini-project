@@ -7,6 +7,7 @@ $green: #89d99d;
 $gray: #777;
 $light-gray: #e3e3e3;
 $purple-shadow: #1b143546;
+$lighten-purple: #767bda14;
 //////////////////////////////////
 
 ///////// icons //////////////////
@@ -31,12 +32,14 @@ body, html {
     padding: 0;
     margin: 0;
     min-width: 320px; 
+    position: relative;
     h1 { margin: 0; }
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden; // Fixing extra white space issue
+    
 }
 
 button, a {
@@ -52,11 +55,11 @@ button {
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 0;
 }
 
 #darker-purple-stripe {
     @extend %stripe-shared;
+    top: 0;
     z-index: -1;
     clip-path: polygon(0 0, 0 20%, 65% 0);
     background-color: $purple-darker;
@@ -64,6 +67,7 @@ button {
 
 #dark-purple-stripe {
     @extend %stripe-shared;
+    top: 0;
     z-index: -2;
     clip-path: polygon(0 0, 100% 0, 100% 48%, 0 79%);
     background-color: $purple-dark;
@@ -71,9 +75,22 @@ button {
 
 #purple-stripe {
     @extend %stripe-shared; 
+    top: 0;
     z-index: -3;
     clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
     background-color: $purple;
+}
+
+#gray-stripe {
+    @extend %stripe-shared; 
+    top: 1450px;
+    z-index: -1;
+    clip-path: polygon(0 73%, 100% 40%, 100% 100%, 0% 100%);
+    background-color: $lighten-purple;
+
+    @include query(1024px) {
+        top: 950px;
+    }
 }
 
 // Navbar - hamburger menu for smaller screen size 
@@ -494,7 +511,7 @@ footer {
     header {
         width: 80%;
         margin: 0 auto;
-        padding: 10px;
+        padding: 5px 0 10px 0;
     }
 }
 

@@ -149,12 +149,12 @@ main input#search-bar:focus {
 }
 
 main button#search-btn {
-  font-size: 0.7em;
+  font-size: 14px;
   background-color: #89d99d;
   color: #ffffff;
   border: none;
   border-radius: 5px;
-  padding: 10px 15px;
+  padding: 13px 20px;
 }
 
 div#learn-more {

@@ -83,14 +83,26 @@ button {
 
 #gray-stripe {
     @extend %stripe-shared; 
+    // bottom: 0; did not work
     top: 1450px;
     z-index: -1;
     clip-path: polygon(0 73%, 100% 40%, 100% 100%, 0% 100%);
     background-color: $lighten-purple;
 
-    @include query(1024px) {
-        top: 950px;
-    }
+    // media queries for responsive gray stripe
+    @include query(365px) { top: 1400px; }
+    @include query(438px) { top: 1320px; }
+    @include query(523px) { top: 1290px; }
+    @include query(535px) { top: 1220px; }
+    @include query(569px) { top: 1200px; }
+    @include query(576px) { top: 1350px; }
+    @include query(768px) { top: 1370px; }
+    @include query(804px) { top: 1350px; }
+    @include query(867px) { top: 1340px; }
+    @include query(950px) { top: 1300px; }
+    @include query(1024px) { top: 1380px; }
+    @include query(1200px) { top: 950px; }
+    @include query(1366px) { top: 880px; }
 }
 
 // Navbar - hamburger menu for smaller screen size 
@@ -408,16 +420,23 @@ div#are-you-ready {
     padding-bottom: 30px; // display in one column in smaller screen 
 
     @include query(768px) { 
-        text-align: left;
-        width: 86%;
+        text-align: center;
+        width: 100%;
         margin: 0 auto;
         display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
+        flex-flow: column wrap;
+        justify-content: center;
         align-items: center;
         font-size: 1.4em;
         font-weight: 300;
         line-height: 10px;
+    }
+
+    @include query(950px) {
+        text-align: left;
+        width: 86%;
+        flex-flow: row wrap;
+        justify-content: space-between;
     }
 
     p:nth-child(1) { color: $purple; } // Are you ready paragraph

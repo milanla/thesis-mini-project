@@ -65,9 +65,81 @@ button:hover {
   background-color: #767bda14;
 }
 
+@media screen and (min-width: 365px) {
+  #gray-stripe {
+    top: 1400px;
+  }
+}
+
+@media screen and (min-width: 438px) {
+  #gray-stripe {
+    top: 1320px;
+  }
+}
+
+@media screen and (min-width: 523px) {
+  #gray-stripe {
+    top: 1290px;
+  }
+}
+
+@media screen and (min-width: 535px) {
+  #gray-stripe {
+    top: 1220px;
+  }
+}
+
+@media screen and (min-width: 569px) {
+  #gray-stripe {
+    top: 1200px;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  #gray-stripe {
+    top: 1350px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #gray-stripe {
+    top: 1370px;
+  }
+}
+
+@media screen and (min-width: 804px) {
+  #gray-stripe {
+    top: 1350px;
+  }
+}
+
+@media screen and (min-width: 867px) {
+  #gray-stripe {
+    top: 1340px;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  #gray-stripe {
+    top: 1300px;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   #gray-stripe {
+    top: 1380px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #gray-stripe {
     top: 950px;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  #gray-stripe {
+    top: 880px;
   }
 }
 
@@ -483,12 +555,32 @@ div#are-you-ready {
 
 @media screen and (min-width: 768px) {
   div#are-you-ready {
-    text-align: left;
-    width: 86%;
+    text-align: center;
+    width: 100%;
     margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 1.4em;
+    font-weight: 300;
+    line-height: 10px;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  div#are-you-ready {
+    text-align: left;
+    width: 86%;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
@@ -496,12 +588,6 @@ div#are-you-ready {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    font-size: 1.4em;
-    font-weight: 300;
-    line-height: 10px;
   }
 }
 

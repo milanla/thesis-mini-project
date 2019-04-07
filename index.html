@@ -14,6 +14,9 @@
     <header>
         <div id="nav-bar">
             <h1 id="nav-logo">MyWebNow</h1>
+            <div id="navbar-toggle">
+                <img src="./images/menu-button-of-three-lines.svg" alt="burger menu">
+            </div>
             <ul id="nav-menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Why Us</a></li>
@@ -24,7 +27,7 @@
         </div>     
     </header>
     <main>
-        <h1>Get a website in 15 minutes <span>or less</span></h1>
+        <h1>Get a website in<br>15 minutes <span>or less</span></h1>
         <input type="text" id="search-bar" placeholder="Write your domain name here..">
         <button id="search-btn">Search</button>
         <div id="learn-more">
@@ -130,4 +133,11 @@
         </div>
     </footer>
 </body>
+<script>
+        let menuBtn = document.getElementById('navbar-toggle')
+        let navMenu = document.querySelector('#nav-menu')
+        menuBtn.addEventListener('click',() => {
+            navMenu.style.display === 'none' ? navMenu.style.display = 'flex' : navMenu.style.display = 'none';
+        })
+    </script>
 </html>

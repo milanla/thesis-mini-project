@@ -139,5 +139,12 @@
         menuBtn.addEventListener('click',() => {
             navMenu.style.display === 'none' ? navMenu.style.display = 'flex' : navMenu.style.display = 'none';
         })
+        window.addEventListener("resize", function (){
+            if (window.innerWidth > 768) {
+                navMenu.style.display = 'flex';
+            } else {
+                navMenu.style.display = 'none';
+            }
+        })
     </script>
 </html>

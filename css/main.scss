@@ -416,8 +416,13 @@ div#services {
 
 // Are you ready section 
 div#are-you-ready { 
+    font-weight: 300;
     margin: 20px auto;
     padding-bottom: 30px; // display in one column in smaller screen 
+
+    @include query(636px) {
+        font-size: 1.3em;
+    }
 
     @include query(768px) { 
         text-align: center;
@@ -428,7 +433,6 @@ div#are-you-ready {
         justify-content: center;
         align-items: center;
         font-size: 1.4em;
-        font-weight: 300;
         line-height: 10px;
     }
 

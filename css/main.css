@@ -144,6 +144,7 @@ button, a {
 #nav-bar ul#nav-menu li {
   display: inline-block;
   padding: 0 15px;
+  margin-bottom: 16px;
 }
 
 #nav-bar a {

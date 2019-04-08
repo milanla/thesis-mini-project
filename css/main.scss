@@ -24,12 +24,6 @@ $cloud-hosting-icon: url('../images/cloud.png');
         @content;
     }
 }
-
-@mixin querydevice($size) {
-    @media screen and (min-device-width : $size){
-        @content;
-    }
-}
 /////////////////////////////////////////
 body, html {
     box-sizing: border-box;
@@ -37,7 +31,7 @@ body, html {
     width: 100%;
     padding: 0;
     margin: 0;
-    min-width: 320px; 
+    min-width: 375px; 
     position: relative;
     h1 { margin: 0; }
 }
@@ -97,6 +91,7 @@ button {
 
     // media queries for responsive gray stripe
     @include query(365px) { top: 1400px; }
+    @include query(375px) { top: 1480px; }
     @include query(438px) { top: 1320px; }
     @include query(523px) { top: 1290px; }
     @include query(535px) { top: 1220px; }
@@ -134,7 +129,7 @@ button {
         position: fixed;
         top: 0;
 
-        @include query(768px) { display: none; }
+        @include query(985px) { display: none; }
 
         &:hover { cursor: pointer; }
 
@@ -156,6 +151,10 @@ button {
 
     // hamburger nav hidden by default, toggle to show with JS
     ul#nav-menu { 
+        position: fixed;
+        right: 0;
+        width: 100%;
+        z-index: 15;
         display: none;
         padding-left: 0;
         padding-top: 20px;
@@ -174,7 +173,8 @@ button {
         }
 
         // Desktop nav 
-        @include query(768px) {
+        @include query(985px) {
+            position: relative;
             display: flex;
             flex-flow: row wrap;
             justify-content: flex-end;
@@ -212,9 +212,11 @@ button {
 main {
     width: 90%;
     margin: 0 auto;
-    padding-top: 130px;
+    padding-top: 40%;
     text-align: center;
 
+    @include query(375px) { padding-top: 40%; }
+    @include query(576px) { padding-top: 25%;  }
     @include query(768px) { padding-top: 120px; }
 
     h1 { // Get a website in 15 minutes or less 
@@ -224,10 +226,10 @@ main {
         color: $white;
         margin-bottom: 20px;
 
+        // @include query(375px) { font-size: 1.7em; }
+        @include query(375px) { font-size: 2em; }
         @include query(414px) { font-size: 2em; } 
-
         @include query(576px) { font-size: 2.2em; }
-
         @include query(768px) { font-size: 2.6em; }
 
         span { color: $green; }
@@ -241,6 +243,8 @@ main {
         border: none;
         border-radius: 5px;
         width: 70%;
+
+        @include query(375px) { padding: 16px 16px 16px 30px; }
 
         @include query(576px) {
             display: inline-block;
@@ -265,6 +269,8 @@ main {
         border-radius: 5px;
         padding: 13px 20px;
 
+        @include query(375px) { padding: 16px 24px; }
+
         @include query(576px) {
             padding: 15px 24px;
             margin-left: 5px;
@@ -279,12 +285,11 @@ main {
 
 // Learn more section 
 div#learn-more {
-    margin: 140px auto 100px auto;
-    position: absulute;
+    margin: 32% auto 40% auto;
+    // position: absulute;
 
-    @include query(576px) {
-        margin: 150px auto 120px auto;
-    }
+    @include query(375px) { margin: 45% auto 50% auto; }
+    @include query(576px) { margin: 150px auto 120px auto; }
 
     span {
         font-size: 12px; 

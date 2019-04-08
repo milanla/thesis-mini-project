@@ -152,7 +152,6 @@ button {
     // hamburger nav hidden by default, toggle to show with JS
     ul#nav-menu { 
         position: fixed;
-        right: 0;
         width: 100%;
         z-index: 15;
         display: none;
@@ -175,6 +174,7 @@ button {
         // Desktop nav 
         @include query(985px) {
             position: relative;
+            width: auto;
             display: flex;
             flex-flow: row wrap;
             justify-content: flex-end;

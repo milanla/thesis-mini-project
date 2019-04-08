@@ -199,25 +199,21 @@ button {
 main {
     width: 90%;
     margin: 0 auto;
-    padding-top: 40%;
+    padding-top: 180px;
     text-align: center;
 
-    @include query(375px) { padding-top: 50%; }
-    @include query(576px) { padding-top: 25%;  }
     @include query(768px) { padding-top: 120px; }
 
     h1 { // Get a website in 15 minutes or less 
-        font-size: 1.7em;
+        font-size: 2em;
         line-height: 1.4em;
         text-align: center;
         color: $white;
         margin-bottom: 20px;
 
-        // @include query(375px) { font-size: 1.7em; }
-        @include query(375px) { font-size: 2em; }
-        @include query(414px) { font-size: 2em; } 
-        @include query(576px) { font-size: 2.2em; }
-        @include query(768px) { font-size: 2.6em; }
+        @include query(375px) { font-size: 2.1em; }
+        @include query(414px) { font-size: 2.6em; } 
+
 
         span { color: $green; }
     }
@@ -228,7 +224,7 @@ main {
         margin: 10px auto;
         padding: 13px 13px 13px 20px;
         border: none;
-        border-radius: 5px;
+        border-radius: 8px;
         width: 70%;
 
         @include query(375px) { padding: 16px 16px 16px 30px; }
@@ -236,13 +232,19 @@ main {
         @include query(576px) {
             display: inline-block;
             width: 50%;
-            padding: 15px 15px 15px 24px;
+            padding: 18px 18px 18px 24px;
         }
 
         @include query(768px) {
-            width: 30%;
+            width: 40%;
             padding: 20px 20px 20px 28px;
             font-size: 1em;
+        }
+
+        @include query(880px) { width: 37%; }
+
+        @include query(1024px) {
+            width: 30%;
         }
 
         // &:focus { outline: none; }
@@ -259,7 +261,7 @@ main {
         @include query(375px) { padding: 16px 24px; }
 
         @include query(576px) {
-            padding: 15px 24px;
+            padding: 18px 24px;
             margin-left: 5px;
         }
 
@@ -272,19 +274,18 @@ main {
 
 // Learn more section 
 div#learn-more {
-    margin: 130px auto 120px auto;
+    margin: 140px auto 120px auto;
     // position: absulute;
 
-    // @include query(375px) { margin: 45% auto 50% auto; }
-    // @include query(576px) { margin: 150px auto 120px auto; }
+
+    @include query(768px) { margin: 170px auto 120px auto; }
+    @include query(1024px) { margin: 140px auto 120px auto; }
 
     span {
-        font-size: 12px; 
+        font-size: 14px; 
         font-weight: 200;
         color: $white;
         text-transform: uppercase;
-
-        @include query(414px) { font-size: 1em; }
     }
 
     #arrow { // bouncing arrow 
@@ -305,14 +306,16 @@ div#learn-more {
 
 // Create account section 
 div#create-account {
-    margin-top: 200px;
+    margin-top: 150px;
     padding-bottom: 50px;
 
-    @include query(576px) {
+    @include query(414px) {
         margin: 0 auto;
-        width: 60%;
+        width: 80%;
         padding-bottom: 80px;
     }
+
+    @include query(576px) { width: 60%; }
 
     @include query(768px) { width: 65%; }
 
@@ -321,14 +324,15 @@ div#create-account {
     @include query(1024px) { width: 80%; }
 
     p { 
-        font-size: 14px; 
+        font-size: 16px; 
         color: $gray; 
         margin-bottom: 30px;
         font-weight: 300;
 
-        @include query(1024px) {
-            font-size: 22px;
-        }
+        @include query(414px) { font-size: 18px; }
+        @include query(576px) { font-size: 20px; }
+
+        @include query(1024px) { font-size: 22px; }
     }
     button { // create account button
         background-color: $purple;

@@ -209,20 +209,8 @@ button:hover {
 main {
   width: 90%;
   margin: 0 auto;
-  padding-top: 40%;
+  padding-top: 180px;
   text-align: center;
-}
-
-@media screen and (min-width: 375px) {
-  main {
-    padding-top: 50%;
-  }
-}
-
-@media screen and (min-width: 576px) {
-  main {
-    padding-top: 25%;
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -232,7 +220,7 @@ main {
 }
 
 main h1 {
-  font-size: 1.7em;
+  font-size: 2em;
   line-height: 1.4em;
   text-align: center;
   color: #ffffff;
@@ -241,23 +229,11 @@ main h1 {
 
 @media screen and (min-width: 375px) {
   main h1 {
-    font-size: 2em;
+    font-size: 2.1em;
   }
 }
 
 @media screen and (min-width: 414px) {
-  main h1 {
-    font-size: 2em;
-  }
-}
-
-@media screen and (min-width: 576px) {
-  main h1 {
-    font-size: 2.2em;
-  }
-}
-
-@media screen and (min-width: 768px) {
   main h1 {
     font-size: 2.6em;
   }
@@ -273,7 +249,7 @@ main input#search-bar {
   margin: 10px auto;
   padding: 13px 13px 13px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   width: 70%;
 }
 
@@ -287,15 +263,27 @@ main input#search-bar {
   main input#search-bar {
     display: inline-block;
     width: 50%;
-    padding: 15px 15px 15px 24px;
+    padding: 18px 18px 18px 24px;
   }
 }
 
 @media screen and (min-width: 768px) {
   main input#search-bar {
-    width: 30%;
+    width: 40%;
     padding: 20px 20px 20px 28px;
     font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 880px) {
+  main input#search-bar {
+    width: 37%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main input#search-bar {
+    width: 30%;
   }
 }
 
@@ -316,7 +304,7 @@ main button#search-btn {
 
 @media screen and (min-width: 576px) {
   main button#search-btn {
-    padding: 15px 24px;
+    padding: 18px 24px;
     margin-left: 5px;
   }
 }
@@ -329,20 +317,26 @@ main button#search-btn {
 }
 
 div#learn-more {
-  margin: 130px auto 120px auto;
+  margin: 140px auto 120px auto;
+}
+
+@media screen and (min-width: 768px) {
+  div#learn-more {
+    margin: 170px auto 120px auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  div#learn-more {
+    margin: 140px auto 120px auto;
+  }
 }
 
 div#learn-more span {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 200;
   color: #ffffff;
   text-transform: uppercase;
-}
-
-@media screen and (min-width: 414px) {
-  div#learn-more span {
-    font-size: 1em;
-  }
 }
 
 div#learn-more #arrow {
@@ -364,15 +358,21 @@ div#learn-more #arrow {
 }
 
 div#create-account {
-  margin-top: 200px;
+  margin-top: 150px;
   padding-bottom: 50px;
+}
+
+@media screen and (min-width: 414px) {
+  div#create-account {
+    margin: 0 auto;
+    width: 80%;
+    padding-bottom: 80px;
+  }
 }
 
 @media screen and (min-width: 576px) {
   div#create-account {
-    margin: 0 auto;
     width: 60%;
-    padding-bottom: 80px;
   }
 }
 
@@ -395,10 +395,22 @@ div#create-account {
 }
 
 div#create-account p {
-  font-size: 14px;
+  font-size: 16px;
   color: #777;
   margin-bottom: 30px;
   font-weight: 300;
+}
+
+@media screen and (min-width: 414px) {
+  div#create-account p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  div#create-account p {
+    font-size: 20px;
+  }
 }
 
 @media screen and (min-width: 1024px) {

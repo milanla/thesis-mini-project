@@ -53,57 +53,44 @@ button {
 // Stripe - for creating stripe background
 %stripe-shared {
     width: 100%;
-    height: 100%;
     position: absolute;
 }
 
 #darker-purple-stripe {
     @extend %stripe-shared;
-    top: 0;
-    z-index: -1;
-    clip-path: polygon(0 0, 0 20%, 65% 0);
     background-color: $purple-darker;
+    z-index: -1;
+    height: 22%;
+    transform: skewY(-10deg);
+    transform-origin: top left;
 }
 
 #dark-purple-stripe {
     @extend %stripe-shared;
-    top: 0;
-    z-index: -2;
-    clip-path: polygon(0 0, 100% 0, 100% 48%, 0 79%);
     background-color: $purple-dark;
+    height: 80%;
+    z-index: -2;
+    transform: skewY(-10deg);
+    transform-origin: top left;
 }
 
 #purple-stripe {
     @extend %stripe-shared; 
-    top: 0;
-    z-index: -3;
-    clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
     background-color: $purple;
+    height: 100%;
+    z-index: -3;
+    transform: skewY(-10deg);
+    transform-origin: top left;
 }
 
 #gray-stripe {
     @extend %stripe-shared; 
-    // bottom: 0; did not work
-    top: 1450px;
-    z-index: -1;
-    clip-path: polygon(0 73%, 100% 40%, 100% 100%, 0% 100%);
     background-color: $lighten-purple;
-
-    // media queries for responsive gray stripe
-    @include query(365px) { top: 1400px; }
-    @include query(375px) { top: 1450px; }
-    @include query(438px) { top: 1320px; }
-    @include query(523px) { top: 1290px; }
-    @include query(535px) { top: 1220px; }
-    @include query(569px) { top: 1200px; }
-    @include query(576px) { top: 1350px; }
-    @include query(768px) { top: 1370px; }
-    @include query(804px) { top: 1350px; }
-    @include query(867px) { top: 1340px; }
-    @include query(950px) { top: 1300px; }
-    @include query(1024px) { top: 1380px; }
-    @include query(1200px) { top: 950px; }
-    @include query(1366px) { top: 880px; }
+    height: 50%;
+    z-index: -1;
+    top: 1220px;
+    transform: skewY(-10deg);
+    transform-origin: bottom right;
 }
 
 // Navbar - hamburger menu for smaller screen size 
@@ -285,17 +272,17 @@ main {
 
 // Learn more section 
 div#learn-more {
-    margin: 32% auto 40% auto;
+    margin: 130px auto 120px auto;
     // position: absulute;
 
-    @include query(375px) { margin: 45% auto 50% auto; }
-    @include query(576px) { margin: 150px auto 120px auto; }
+    // @include query(375px) { margin: 45% auto 50% auto; }
+    // @include query(576px) { margin: 150px auto 120px auto; }
 
     span {
         font-size: 12px; 
+        font-weight: 200;
         color: $white;
         text-transform: uppercase;
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.50);
 
         @include query(414px) { font-size: 1em; }
     }
@@ -318,6 +305,7 @@ div#learn-more {
 
 // Create account section 
 div#create-account {
+    margin-top: 200px;
     padding-bottom: 50px;
 
     @include query(576px) {
@@ -336,13 +324,14 @@ div#create-account {
         font-size: 14px; 
         color: $gray; 
         margin-bottom: 30px;
+        font-weight: 300;
 
         @include query(1024px) {
             font-size: 22px;
         }
     }
     button { // create account button
-        background-color: $purple-dark;
+        background-color: $purple;
         border: none;
         border-radius: 5px;
         color: $white;

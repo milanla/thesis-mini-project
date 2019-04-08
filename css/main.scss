@@ -93,11 +93,10 @@ button {
     @include query(365px) { top: 1400px; }
     @include query(375px) { top: 1450px; }
     @include query(438px) { top: 1320px; }
-    @include query(480px) { top: 1400px; }
-    @include query(523px) { top: 1350px; }
-    @include query(535px) { top: 1360px; }
+    @include query(523px) { top: 1290px; }
+    @include query(535px) { top: 1220px; }
     @include query(569px) { top: 1200px; }
-    @include query(576px) { top: 1400px; }
+    @include query(576px) { top: 1350px; }
     @include query(768px) { top: 1370px; }
     @include query(804px) { top: 1350px; }
     @include query(867px) { top: 1340px; }
@@ -153,7 +152,8 @@ button {
     // hamburger nav hidden by default, toggle to show with JS
     ul#nav-menu { 
         position: fixed;
-        width: 100%;
+        right: 0;
+        width: 60%;
         z-index: 15;
         display: none;
         padding-left: 0;
@@ -175,7 +175,6 @@ button {
         // Desktop nav 
         @include query(985px) {
             position: relative;
-            width: auto;
             display: flex;
             flex-flow: row wrap;
             justify-content: flex-end;
@@ -216,8 +215,7 @@ main {
     padding-top: 40%;
     text-align: center;
 
-    @include query(375px) { padding-top: 40%; }
-    @include query(414px) { padding-top: 30%; }
+    @include query(375px) { padding-top: 50%; }
     @include query(576px) { padding-top: 25%;  }
     @include query(768px) { padding-top: 120px; }
 
@@ -291,14 +289,15 @@ div#learn-more {
     // position: absulute;
 
     @include query(375px) { margin: 45% auto 50% auto; }
-    @include query(376px) { margin: 27% auto 35% auto; }
     @include query(576px) { margin: 150px auto 120px auto; }
 
     span {
         font-size: 12px; 
         color: $white;
         text-transform: uppercase;
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.466);
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.50);
+
+        @include query(414px) { font-size: 1em; }
     }
 
     #arrow { // bouncing arrow 

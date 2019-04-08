@@ -32,7 +32,7 @@
         <button id="search-btn">Search</button>
         <div id="learn-more">
             <span>learn how we can enhance your business</span>
-            <div id="arrow" class="bounce"></div> 
+            <div id="arrow" class="bounce"></div>
         </div>
         <div id="create-account">
             <p>adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore<br> magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation<br> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure.</p>
@@ -144,7 +144,7 @@
 
         // when click outside toggle button, the menu will be hidden
         window.addEventListener('click', (e) => {
-            if (e.target !== toggleBtn) {
+            if (toggleBtn.style.display === 'inline-block' && e.target !== toggleBtn) {
                 if (navMenu.style.display === 'flex') {
                     navMenu.style.display = 'none';
                 }

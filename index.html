@@ -15,7 +15,7 @@
         <div id="nav-bar">
             <h1 id="nav-logo">MyWebNow</h1>
             <div id="navbar-toggle">
-                <img src="./images/menu-button-of-three-lines.svg" alt="burger menu">
+                <img id="toggle-btn" src="./images/menu-button-of-three-lines.svg" alt="burger menu">
             </div>
             <ul id="nav-menu">
                 <li><a href="#">Home</a></li>
@@ -134,12 +134,23 @@
     </footer>
 </body>
 <script>
-        let menuBtn = document.getElementById('navbar-toggle')
-        let navMenu = document.querySelector('#nav-menu')
+        let menuBtn = document.getElementById('navbar-toggle');
+        let navMenu = document.querySelector('#nav-menu');
+        let toggleBtn = document.querySelector('#toggle-btn');
+        
         menuBtn.addEventListener('click',() => {
             navMenu.style.display === 'none' ? navMenu.style.display = 'flex' : navMenu.style.display = 'none';
         })
-        window.addEventListener("resize", function (){
+
+        window.addEventListener('click', (e) => {
+            if (e.target !== toggleBtn) {
+                if (navMenu.style.display === 'flex') {
+                    navMenu.style.display = 'none';
+                }
+            }       
+        })
+
+        window.addEventListener('resize', function (){
             if (window.innerWidth > 768) {
                 navMenu.style.display = 'flex';
             } else {

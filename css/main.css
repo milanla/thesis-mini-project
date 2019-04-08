@@ -73,7 +73,7 @@ button:hover {
 
 @media screen and (min-width: 375px) {
   #gray-stripe {
-    top: 1480px;
+    top: 1450px;
   }
 }
 
@@ -83,15 +83,21 @@ button:hover {
   }
 }
 
+@media screen and (min-width: 480px) {
+  #gray-stripe {
+    top: 1400px;
+  }
+}
+
 @media screen and (min-width: 523px) {
   #gray-stripe {
-    top: 1290px;
+    top: 1350px;
   }
 }
 
 @media screen and (min-width: 535px) {
   #gray-stripe {
-    top: 1220px;
+    top: 1360px;
   }
 }
 
@@ -103,7 +109,7 @@ button:hover {
 
 @media screen and (min-width: 576px) {
   #gray-stripe {
-    top: 1350px;
+    top: 1400px;
   }
 }
 
@@ -295,6 +301,12 @@ main {
   }
 }
 
+@media screen and (min-width: 414px) {
+  main {
+    padding-top: 30%;
+  }
+}
+
 @media screen and (min-width: 576px) {
   main {
     padding-top: 25%;
@@ -414,6 +426,12 @@ div#learn-more {
   }
 }
 
+@media screen and (min-width: 376px) {
+  div#learn-more {
+    margin: 27% auto 35% auto;
+  }
+}
+
 @media screen and (min-width: 576px) {
   div#learn-more {
     margin: 150px auto 120px auto;
@@ -424,12 +442,7 @@ div#learn-more span {
   font-size: 12px;
   color: #ffffff;
   text-transform: uppercase;
-}
-
-@media screen and (min-width: 414px) {
-  div#learn-more span {
-    font-size: 1em;
-  }
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.466);
 }
 
 div#learn-more #arrow {
